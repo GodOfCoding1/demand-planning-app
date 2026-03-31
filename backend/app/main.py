@@ -13,14 +13,10 @@ from app.routers import items, aggregate, alerts, accuracy
 
 app = FastAPI(title="Demand Planning Dashboard API", version="1.0.0")
 
-_default_origins = ["http://localhost:3000", "http://127.0.0.1:3000"]
-_env_origins = os.getenv("CORS_ORIGINS", "")
-_origins = [o.strip() for o in _env_origins.split(",") if o.strip()] if _env_origins else _default_origins
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=_origins,
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
