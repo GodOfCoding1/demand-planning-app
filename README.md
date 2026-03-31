@@ -3,7 +3,11 @@
 A full-stack demand planning dashboard with a **Next.js** frontend and **FastAPI** (Python) backend backed by SQLite.
 
 Deployed Link: https://demand-planning-app-pi.vercel.app/
-Please note if it says Failed to load chart: Failed to fetch its because its a free teir just refresh the page in 1-2 mins and the backend should start up
+Please note if it says Failed to load chart or Failed to fetch its because its a free teir just refresh the page in 1-2 mins and the backend should start up
+
+<img width="1707" height="975" alt="image" src="https://github.com/user-attachments/assets/4fa7e6e3-2a39-402b-b6b5-519ad0037040" />
+
+
 
 ## Local Development
 
