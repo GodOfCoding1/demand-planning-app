@@ -9,4 +9,4 @@ services:
       - key: CORS_ORIGINS
         value: https://your-frontend.vercel.app,http://localhost:3000
       - key: PYTHON_VERSION
-        value: "3.11"
+        value: "3.11.12"
