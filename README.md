@@ -2,6 +2,9 @@
 
 A full-stack demand planning dashboard with a **Next.js** frontend and **FastAPI** (Python) backend backed by SQLite.
 
+Deployed Link: https://demand-planning-app-pi.vercel.app/
+Please note if it says Failed to load chart: Failed to fetch its because its a free teir just refresh the page in 1-2 mins and the backend should start up
+
 ## Local Development
 
 ### Prerequisites
@@ -65,17 +68,17 @@ The backend is ready for one-click deploy on [Render](https://render.com).
 2. Connect your GitHub repo.
 3. Configure:
 
-| Setting | Value |
-|---|---|
-| **Root Directory** | `backend` |
-| **Runtime** | Python |
-| **Build Command** | `pip install -r requirements.txt` |
-| **Start Command** | `bash start.sh` |
+| Setting            | Value                             |
+| ------------------ | --------------------------------- |
+| **Root Directory** | `backend`                         |
+| **Runtime**        | Python                            |
+| **Build Command**  | `pip install -r requirements.txt` |
+| **Start Command**  | `bash start.sh`                   |
 
 4. Add environment variable:
 
-| Key | Value |
-|---|---|
+| Key            | Value                                                    |
+| -------------- | -------------------------------------------------------- |
 | `CORS_ORIGINS` | `https://your-frontend.vercel.app,http://localhost:3000` |
 
 5. Deploy. On first startup the server automatically detects that the SQLite DB is missing and rebuilds it from the bundled CSV files (~30 seconds).
@@ -93,8 +96,8 @@ The backend is ready for one-click deploy on [Render](https://render.com).
 2. Import your repo, set **Root Directory** to `frontend`.
 3. Add environment variable:
 
-| Key | Value |
-|---|---|
+| Key                   | Value                                      |
+| --------------------- | ------------------------------------------ |
 | `NEXT_PUBLIC_API_URL` | `https://your-render-service.onrender.com` |
 
 4. Deploy.
@@ -105,13 +108,13 @@ The backend is ready for one-click deploy on [Render](https://render.com).
 
 ### Backend (`backend/`)
 
-| Variable | Default | Description |
-|---|---|---|
-| `CORS_ORIGINS` | `http://localhost:3000,http://127.0.0.1:3000` | Comma-separated allowed origins |
-| `PORT` | `8000` | Server port (set automatically by Render) |
+| Variable       | Default                                       | Description                               |
+| -------------- | --------------------------------------------- | ----------------------------------------- |
+| `CORS_ORIGINS` | `http://localhost:3000,http://127.0.0.1:3000` | Comma-separated allowed origins           |
+| `PORT`         | `8000`                                        | Server port (set automatically by Render) |
 
 ### Frontend (`frontend/`)
 
-| Variable | Default | Description |
-|---|---|---|
+| Variable              | Default                 | Description          |
+| --------------------- | ----------------------- | -------------------- |
 | `NEXT_PUBLIC_API_URL` | `http://localhost:8000` | Backend API base URL |
